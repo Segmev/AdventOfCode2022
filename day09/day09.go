@@ -15,13 +15,6 @@ type Vector struct {
 	next *Vector
 }
 
-func abs(nb int) int {
-	if nb < 0 {
-		return -nb
-	}
-	return nb
-}
-
 func (node *Vector) AddCoors(x, y int) {
 	node.px = node.x
 	node.py = node.y
@@ -43,7 +36,7 @@ func initRope(nodeAmount int) *Vector {
 func updateNextNode(H, N *Vector) {
 	xDiff := H.x - N.x
 	yDiff := H.y - N.y
-	if abs(xDiff) <= 1 && abs(yDiff) <= 1 {
+	if tools.Abs(xDiff) <= 1 && tools.Abs(yDiff) <= 1 {
 		return
 	}
 	N.px = N.x

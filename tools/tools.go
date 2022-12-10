@@ -40,3 +40,10 @@ func HasToken[V comparable](s []V, v V) (bool, int) {
 	}
 	return false, -1
 }
+
+func Abs(nb int) int {
+	if nb < 0 {
+		return -nb
+	}
+	return nb
+}
