@@ -1,4 +1,4 @@
-package main
+package day11
 
 import (
 	"fmt"
@@ -126,8 +126,8 @@ func partTwo(monkeysString []string) {
 	fmt.Println(counts[len(counts)-1] * counts[len(counts)-2])
 }
 
-func main() {
-	s := tools.Readfile("./input.txt")
+func Main(path string) {
+	s := tools.Readfile(path)
 
 	monkeys := strings.Split(s, "\n\n")
 	partOne(monkeys)

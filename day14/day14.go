@@ -1,4 +1,4 @@
-package main
+package day14
 
 import (
 	"fmt"
@@ -160,8 +160,8 @@ func partTwo(lines []string) {
 	fmt.Println(PoorSandInf(taken, deepestY))
 }
 
-func main() {
-	s := tools.Readfile("./input.txt")
+func Main(path string) {
+	s := tools.Readfile(path)
 
 	lines := strings.Split(s, "\n")
 	partOne(lines)

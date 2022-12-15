@@ -1,4 +1,4 @@
-package main
+package day13
 
 import (
 	"encoding/json"
@@ -93,8 +93,8 @@ func partTwo(input string) {
 	fmt.Println(a * b)
 }
 
-func main() {
-	s := tools.Readfile("./input.txt")
+func Main(path string) {
+	s := tools.Readfile(path)
 
 	partOne(s)
 	partTwo(s)

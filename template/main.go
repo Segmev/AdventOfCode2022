@@ -12,8 +12,8 @@ func partOne(lines []string) {
 func partTwo(lines []string) {
 }
 
-func main() {
-	s := tools.Readfile("./input.txt")
+func Main(path string) {
+	s := tools.Readfile(path)
 
 	lines := strings.Split(s, "\n")
 	partOne(lines)

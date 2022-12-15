@@ -1,4 +1,4 @@
-package main
+package day09
 
 import (
 	"fmt"
@@ -138,8 +138,8 @@ func partTwo(lines []string) {
 	fmt.Println(len(visited))
 }
 
-func main() {
-	s := tools.Readfile("./input.txt")
+func Main(path string) {
+	s := tools.Readfile(path)
 
 	lines := strings.Split(s, "\n")
 	partOne(lines)

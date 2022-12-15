@@ -1,4 +1,4 @@
-package main
+package day15
 
 import (
 	"fmt"
@@ -115,8 +115,8 @@ func partTwo(sensors []*Coor) Coor {
 	return Coor{}
 }
 
-func main() {
-	s := tools.Readfile("./input.txt")
+func Main(path string) {
+	s := tools.Readfile(path)
 
 	lines := strings.Split(s, "\n")
 	sensors, beacons, lowestX, highestX := parseInput(lines[:len(lines)-1])

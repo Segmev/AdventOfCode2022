@@ -1,4 +1,4 @@
-package main
+package day07
 
 import (
 	"fmt"
@@ -88,8 +88,8 @@ func partTwo(origin *tools.GraphNode[int]) {
 	fmt.Println(selected.Value)
 }
 
-func main() {
-	s := tools.Readfile("./input.txt")
+func Main(path string) {
+	s := tools.Readfile(path)
 
 	lines := strings.Split(s, "\n")
 	origin := constructFS(lines)

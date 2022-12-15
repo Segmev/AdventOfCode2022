@@ -1,4 +1,4 @@
-package main
+package day01
 
 import (
 	"fmt"
@@ -9,8 +9,8 @@ import (
 	"github.com/Segmev/AdventOfCode2022/tools"
 )
 
-func main() {
-	s := tools.Readfile("./input.txt")
+func Main(input string) {
+	s := tools.Readfile(input)
 
 	lines := strings.Split(s, "\n")
 
