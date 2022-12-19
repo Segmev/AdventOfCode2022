@@ -6,6 +6,14 @@ func GetSet[T comparable]() Set[T] {
 	return make(Set[T])
 }
 
+func GetSetFrom[T comparable](keys []T) Set[T] {
+	s := GetSet[T]()
+	for _, k := range keys {
+		s.Add(k)
+	}
+	return s
+}
+
 func (s Set[T]) Add(key T) {
 	s[key] = true
 }
@@ -33,6 +41,16 @@ func (s Set[T]) Clear() {
 	}
 }
 
+func (s Set[T]) GetKeys() []T {
+	res := []T{}
+
+	for k := range s {
+		res = append(res, k)
+	}
+
+	return res
+}
+
 func (s Set[T]) GetIntersetion(otherSet Set[T]) Set[T] {
 	intersection := GetSet[T]()
 
@@ -55,6 +73,16 @@ func (s Set[T]) GetIntersetion(otherSet Set[T]) Set[T] {
 	}
 
 	return intersection
+}
+
+func (s Set[T]) Clone() Set[T] {
+	clone := GetSet[T]()
+
+	for key := range s {
+		clone.Add(key)
+	}
+
+	return clone
 }
 
 func (s Set[T]) GetUnion(otherSet Set[T]) Set[T] {
