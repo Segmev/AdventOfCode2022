@@ -3,7 +3,6 @@ package day18
 import (
 	"fmt"
 	"math"
-	"strconv"
 	"strings"
 
 	"github.com/Segmev/AdventOfCode2022/tools"
@@ -23,16 +22,11 @@ func (c *Cube) GetId() string {
 	return c.id
 }
 
-func Atoi(s string) int {
-	res, _ := strconv.Atoi(s)
-	return res
-}
-
 func partOne(lines []string) {
 	cubes := map[string]*Cube{}
 	for _, line := range lines {
 		coors := strings.Split(line, ",")
-		cube := Cube{x: Atoi(coors[0]), y: Atoi(coors[1]), z: Atoi(coors[2]), LinkedCubes: map[string]*Cube{}}
+		cube := Cube{x: tools.Atoi(coors[0]), y: tools.Atoi(coors[1]), z: tools.Atoi(coors[2]), LinkedCubes: map[string]*Cube{}}
 		for i := -1; i <= 1; i++ {
 			if i == 0 {
 				continue
@@ -117,7 +111,7 @@ func partTwo(lines []string) {
 	minZ, maxZ := math.MaxInt, math.MinInt
 	for _, line := range lines {
 		coors := strings.Split(line, ",")
-		cubeX, cubeY, cubeZ := Atoi(coors[0]), Atoi(coors[1]), Atoi(coors[2])
+		cubeX, cubeY, cubeZ := tools.Atoi(coors[0]), tools.Atoi(coors[1]), tools.Atoi(coors[2])
 		cube := Cube{x: cubeX, y: cubeY, z: cubeZ, LinkedCubes: map[string]*Cube{}}
 
 		if cubeX < minX {

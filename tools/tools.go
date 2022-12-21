@@ -2,6 +2,7 @@ package tools
 
 import (
 	"os"
+	"strconv"
 )
 
 func Readfile(path string) string {
@@ -35,4 +36,17 @@ func Abs(nb int) int {
 		return -nb
 	}
 	return nb
+}
+
+func Atoi(s string) int {
+	res, _ := strconv.Atoi(s)
+	return res
+}
+
+func CloneMap[k comparable, v any](m map[k]v) map[k]v {
+	n := map[k]v{}
+	for k, v := range m {
+		n[k] = v
+	}
+	return n
 }
