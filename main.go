@@ -22,6 +22,7 @@ import (
 	"github.com/Segmev/AdventOfCode2022/day16"
 	"github.com/Segmev/AdventOfCode2022/day17"
 	"github.com/Segmev/AdventOfCode2022/day18"
+	"github.com/Segmev/AdventOfCode2022/day21"
 )
 
 func runningFn(dailyFuncs map[string]func(string), arg string) {
@@ -51,6 +52,7 @@ func main() {
 		"day16": day16.Main,
 		"day17": day17.Main,
 		"day18": day18.Main,
+		"day21": day21.Main,
 	}
 	if len(os.Args) < 2 {
 		for i := 1; i <= len(dailyFuncs); i++ {

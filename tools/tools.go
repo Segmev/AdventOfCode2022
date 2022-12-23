@@ -22,13 +22,9 @@ func IndexInSlice[K comparable](s []K, value K) int {
 	return -1
 }
 
-func HasToken[V comparable](s []V, v V) (bool, int) {
-	for i, value := range s {
-		if value == v {
-			return true, i
-		}
-	}
-	return false, -1
+func HasKey[K comparable, V any](key K, m map[K]V) bool {
+	_, ok := m[key]
+	return ok
 }
 
 func Abs(nb int) int {
