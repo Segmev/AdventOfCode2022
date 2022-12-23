@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 
-  "github.com/Segmev/AdventOfCode2022/day20"
 	"github.com/Segmev/AdventOfCode2022/day01"
 	"github.com/Segmev/AdventOfCode2022/day02"
 	"github.com/Segmev/AdventOfCode2022/day03"
@@ -23,6 +22,8 @@ import (
 	"github.com/Segmev/AdventOfCode2022/day16"
 	"github.com/Segmev/AdventOfCode2022/day17"
 	"github.com/Segmev/AdventOfCode2022/day18"
+	"github.com/Segmev/AdventOfCode2022/day19"
+	"github.com/Segmev/AdventOfCode2022/day20"
 	"github.com/Segmev/AdventOfCode2022/day21"
 )
 
@@ -42,7 +43,6 @@ func main() {
 		"day05": day05.Main,
 		"day06": day06.Main,
 		"day07": day07.Main,
-            "day20": day20.Main,
 		"day08": day08.Main,
 		"day09": day09.Main,
 		"day10": day10.Main,
@@ -54,6 +54,8 @@ func main() {
 		"day16": day16.Main,
 		"day17": day17.Main,
 		"day18": day18.Main,
+		"day19": day19.Main,
+		"day20": day20.Main,
 		"day21": day21.Main,
 	}
 	if len(os.Args) < 2 {
