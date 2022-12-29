@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+  "github.com/Segmev/AdventOfCode2022/day20"
 	"github.com/Segmev/AdventOfCode2022/day01"
 	"github.com/Segmev/AdventOfCode2022/day02"
 	"github.com/Segmev/AdventOfCode2022/day03"
@@ -41,6 +42,7 @@ func main() {
 		"day05": day05.Main,
 		"day06": day06.Main,
 		"day07": day07.Main,
+            "day20": day20.Main,
 		"day08": day08.Main,
 		"day09": day09.Main,
 		"day10": day10.Main,
