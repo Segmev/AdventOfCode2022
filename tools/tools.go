@@ -5,6 +5,12 @@ import (
 	"strconv"
 )
 
+func CloneSlice[T any](s []T) []T {
+	res := make([]T, len(s))
+	copy(res, s)
+	return res
+}
+
 func Readfile(path string) string {
 	b, err := os.ReadFile(path)
 	if err != nil {
@@ -32,6 +38,10 @@ func Abs(nb int) int {
 		return -nb
 	}
 	return nb
+}
+
+func Modulo(a, b int) int {
+	return ((a % b) + b) % b
 }
 
 func Atoi(s string) int {
